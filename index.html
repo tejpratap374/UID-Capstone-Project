@@ -14,10 +14,15 @@
       <h1>CryptoLab</h1>
       <p>Interactive Cryptography Playground</p>
     </div>
-    <span class="status"><i></i>System online</span>
+    <div class="header-actions">
+      <span class="status"><i></i>System online</span>
+      <button id="themeToggle" class="theme-toggle" type="button" aria-label="Toggle color theme">☀️</button>
+    </div>
   </header>
   <div class="layout">
     <nav aria-label="Algorithms">
+      <h2>Browse</h2>
+      <div id="groupList" class="group-list"></div>
       <h2>Algorithms</h2>
       <div id="algoList"></div>
     </nav>
@@ -26,7 +31,9 @@
       <label for="input">Input</label>
       <textarea id="input" rows="4" spellcheck="false">HELLO WORLD</textarea>
       <div class="count" id="inCount"></div>
+      <div id="presetList" class="preset-list" aria-label="Example presets"></div>
       <div id="opts"></div>
+      <div id="validationMsg" class="validation-msg" aria-live="polite"></div>
       <div class="row">
         <button id="encBtn" class="primary">Encrypt</button>
         <button id="decBtn" class="primary">Decrypt</button>
@@ -35,6 +42,7 @@
       <pre id="output" aria-live="polite"></pre>
       <div class="count" id="outCount"></div>
       <div class="row">
+        <button id="copyInputBtn">Copy input</button>
         <button id="copyBtn">Copy result</button>
         <button id="clearBtn">Clear</button>
       </div>
