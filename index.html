@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CryptoLab - Interactive Cryptography Playground</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+    <div>
+      <h1>CryptoLab</h1>
+      <p>Interactive Cryptography Playground</p>
+    </div>
+    <span class="status"><i></i>System online</span>
+  </header>
+  <div class="layout">
+    <nav aria-label="Algorithms">
+      <h2>Algorithms</h2>
+      <div id="algoList"></div>
+    </nav>
+    <main>
+      <h2 id="title"></h2>
+      <label for="input">Input</label>
+      <textarea id="input" rows="4" spellcheck="false">HELLO WORLD</textarea>
+      <div class="count" id="inCount"></div>
+      <div id="opts"></div>
+      <div class="row">
+        <button id="encBtn" class="primary">Encrypt</button>
+        <button id="decBtn" class="primary">Decrypt</button>
+      </div>
+      <label>Output</label>
+      <pre id="output" aria-live="polite"></pre>
+      <div class="count" id="outCount"></div>
+      <div class="row">
+        <button id="copyBtn">Copy result</button>
+        <button id="clearBtn">Clear</button>
+      </div>
+      <section class="panel" id="about">
+        <h3>About algorithm</h3>
+        <div id="aboutBody"></div>
+      </section>
+      <section class="panel">
+        <h3>History <button id="clearHist" class="link">Clear history</button></h3>
+        <ul id="history"></ul>
+      </section>
+    </main>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>
